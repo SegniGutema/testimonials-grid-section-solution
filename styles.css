@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  display: grid;
+  place-items: center;
+  height: ;
+  background-color: var(--Light-grayish-blue);
+  padding: 5vh 3vw;
+}
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+.container {
+  display: grid;
+
+  grid-template:
+    "daniel" auto
+    "jonathan" auto
+    "jeanette" auto
+    "patrick" auto
+    "kira" auto/80vw;
+  width: 80%;
+  height: auto;
+  gap: 2rem;
+  margin-inline: auto;
+}
+.card {
+  border-radius: 10px;
+  height: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template:
+    "personal-info" min-content
+    " not-quoted" min-content
+    "quoted" min-content/ 1fr;
+  gap: 1rem;
+  width: min(100%, 50em);
+  margin-inline: auto;
+  box-shadow: 0 0 30px var(--Light-gray);
+}
+.daniel {
+  background-color: var(--Moderate-violet);
+  grid-area: daniel;
+  color: var(--White);
+  position: relative;
+}
+.jonathan {
+  background-color: var(--Very-dark-grayish-blue);
+  grid-area: jonathan;
+  color: var(--White);
+}
+.jeanette {
+  background-color: var(--White);
+  grid-area: jeanette;
+}
+.patrick {
+  background-color: var(--Very-dark-blackish-blue);
+  grid-area: patrick;
+  color: var(--White);
+}
+.kira {
+  background-color: var(--White);
+  grid-area: kira;
+}
+.personal-info {
+  grid-area: personal-info;
+  display: grid;
+  grid-template: "img name-verified" auto/min-content auto;
+  gap: 1rem;
+}
+img {
+  border-radius: 50%;
+  width: 35px;
+  aspect-ratio: 1;
+}
+.not-quoted {
+  grid-area: not-quoted;
+  font-weight: 600;
+  padding: 0;
+}
+.quoted {
+  grid-area: quoted;
+  opacity: 70%;
+  padding: 0;
+}
+.Verified {
+  opacity: 50%;
+}
+.big-quotation-mark {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  width: 5rem;
+}
+.card > :not(.big-quotation-mark) {
+  z-index: 1;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+.attribution a:hover {
+  text-decoration: wavy;
+}
+@media (min-width: 70em) {
+  .container {
+    grid-template:
+      "daniel daniel jonathan kira" auto
+      "jeanette patrick patrick kira" auto/auto;
+  }
+  .card {
+    width: unset;
+  }
+}

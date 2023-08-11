@@ -15,8 +15,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL:https://segnigutema.github.io/testimonials-grid-section-solution
+- Live Site URL: https://segnigutema.github.io/testimonials-grid-section-solution/
 
 ### Built with
 
